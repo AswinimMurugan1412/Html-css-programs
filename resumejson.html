@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="resumejson.css" />
+    <title>RESUME</title>
+    <link rel="icon" href="th.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="a.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <script>
+     
+     let users={"data": [{"image":"../../Desktop/HTML&CSS&JS Programs/photos.jpeg","profileinfo":"To secure a responsible career opportunity to fully utilize my training and skills while making a significant contribution to the success of the company","name1":"Tamil","name2":"English","p1":"Java","p2":"DS","p3":"Html","p4":"PHP","nam1":"Canva","nam2":"MS-Word ","nam3":"Glimp","nam4":"videopad editor","name":"Aswini Murugan","Phonenumber":"9597945866","email":"aswinimurugan@gmail.com","course":"BscIT","year":"2018-2021","college":"AVP collenge of Arts and science","persentange":"79%","course1":"Hslc","year1":"2017-2018","school":"APS Academy Matric higher secondary school","persentange1":"59%","tittle":"SEMINAR HALL","des":"Seminar is an android application.It is an online Registration for Class.The Name Seminar Hall explains that students can get information directly from college admin regarding placement drives without any delay to build their career"}]}
+     function loadContent() {
+     let htmlcontent="";
+            users.data.forEach((user,index)=>{
+                htmlcontent=`${htmlcontent}<div class="left-box">
+		<br><br>
+		<div class="profile">
+			<img id="img" src="${user.image}" />
+		</div>
+		<div class="content-box">
+		<h2>Profile info</h2>
+		<hr class="hr1">
+		<p class="p1"> ${user.profileinfo}
+
+		<h3>Language:</h3>
+		<p class="p2">${user.name1}</p>
+		<div id="progress"></div>
+		<p class="p2">${user.name2}</p>
+		<div id="progress1"></div>
+
+		<br><br>
+		<h2>My Skills</h2>
+		<hr class="hr1">
+		<br>
+		<div class="col-div-6"><p class="p2">${user.p1}</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">${user.p2}</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">${user.p3}</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">${user.p4}</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+
+			<div class="clearfix"></div>
+			<br>
+			<h2>SOFTWARE SKILLS</h2>
+			<hr class="hr1">
+			<br>
+			<div class="col-div-3 col3">
+				<span class="inp">${user.nam1}</span>
+			</div>
+			<div class="col-div-3 col3">
+				<span class="inp">${user.nam2}</span>
+			</div>
+			<div class="col-div-3 col3">
+				<span class="inp">${user.nam3}</span>
+			</div>
+			<div class="col-div-3 col3">
+				<span class="inp">${user.nam4}</span>
+			</div>
+			<div class="clearfix"></div>
+			<br>
+		</div>
+	</div>
+
+	<div class="right-box">
+		<h1 class="n1">${user.name}</h2>
+			<span></span>
+		</h1>
+
+		<br>	
+		<h2 class="heading">CONTACT</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<h5><p class="p5">Phone number :</p></h5>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">${user.Phonenumber }</p>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<h5><p class="p5">Email :</p></h5>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">${user.email}</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<br>	
+		<h2 class="heading">My education</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<h5><p class="p5">${user.year}</p></h5>
+			<span class="span1"><h2>${user.course}</span></h2>
+		</div>
+		<div class="col-div-8">
+			<h5><p class="p5"> ${user.college} </p></h5>
+			<span class="span1"> <h2>${user.persentange}</span></h2>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<h5><p class="p5">${user.year1}</p></h5>
+			<span class="span1"><b><h2>${user.course1}</span></b><h2>
+		</div>
+		<div class="col-div-8">
+			<h5><p class="p5">${user.school}</p></h5>
+			<span class="span1"><h2>${user.persentange1}</span></h2>
+		</div>
+		<div class="clearfix"></div>
+        <br>	
+		<h2 class="heading">Project description</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Tittle:</p>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">  ${user.tittle} :</p>
+			<span class="span1">
+                <p class="p5">  ${user.des} </p> </span>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+        
+	</div>
+	<div class="clearfix"></div> `
+            });
+            document.getElementById("as").innerHTML=htmlcontent;
+     }
+            </script>
+</head>
+<body>        
+    <div class="resume-main" id="as">
+	
+    </div>
+
+</body>
+<script>
+    loadContent();
+</script>
+
+</html>

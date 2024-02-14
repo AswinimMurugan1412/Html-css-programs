@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <script>
+        function submit(){
+            let name =document.signup.name.value;
+            let password =document.signup.password.value;
+            let retypassword=document.signup.retypepassword.value;
+            if (name && name.lengthm !==0 && password && password.length< 6 && retypepassword && rety)
+            {
+                alert("success");
+            }
+            else if(!name && password && !retrypassword){
+                alert ("Please fill this letter")
+            }
+            else if(name.length == 0){
+                alert ("please enter name");
+
+            }
+            else if(passwor.length <6){
+                alert ("please enter the valid password");
+            }
+            else if(retypepassword===password){
+                alert("password mis-match");
+            }
+            else{
+                alert ("please fill the form");
+            }
+
+        }
+        </script>
+        </head>
+</html>

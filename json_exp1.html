@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+     function loadContent() 
+        {
+            let users = {"data": [{"image":"https://bootdey.com/img/Content/avatar/avatar1.png",
+            "name": "John Doe - Project Lead",
+            "barpercentage":"70%"},{"image":"https://bootdey.com/img/Content/avatar/avatar2.png",
+            "name": "Cameron Doe - Sales",
+            "barpercentage":"91%"},{"image":"https://bootdey.com/img/Content/avatar/avatar3.png",
+            "name": "Hoffman Doe - Support",
+            "barpercentage":"40%"},{"image":"https://bootdey.com/img/Content/avatar/avatar4.png",
+            "name": "Jane Doe - Marketing",
+            "barpercentage":"20%"},{"image":"https://bootdey.com/img/Content/avatar/avatar5.png",
+            "name": "Hoffman Doe - Support",
+            "barpercentage":"45%"}]}
+
+            let htmlContent = "";
+            users.data.forEach((user) => {
+htmlContent = htmlContent + `
+<li>
+                        <div class="prog-avatar">
+                            <img src="${user.image}" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="title">
+                                <a href="#">${user.name}</a>
+                            </div>
+                            <div class="progress progress-xs">
+                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span class="">${user.barpercentage}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+`
+                                
+            });
+            document.getElementById("mypanel").innerHTML = htmlContent; 
+        }
+
+      
+</script>
+
+
+<body>
+    <div class="container bootstrap snippets" id="">
+        <div class="col-md-6">
+            <div class="panel">
+                <header class="panel-heading">
+                    goal progress
+                    <span class="tools pull-right">
+                        <a href="#" class="fa fa-chevron-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                     </span>
+                </header>
+                <div class="panel-body">
+                    <ul class="goal-progress" id="mypanel">
+                     
+                       
+                    </ul>
+                    <div class="text-center"><a href="#">View all Goals</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        loadContent();
+    </script>
+</body>
+</html>

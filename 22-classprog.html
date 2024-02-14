@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function arrayFilter() {
+                let arr=[2,3,7,9,8,5,6,4,3,5,6]
+                let json={"data":[
+                    {"name":"Ranjith", "age" :53, "gender":"male"},
+                    {"name":"Ram", "age" :64, "gender":"male"},
+                    {"name":"Rathika", "age" :61, "gender":"Female"},
+                    {"name":"Ranjan", "age" :17, "gender":"male"},
+                    {"name":"Ragul", "age" :11, "gender":"male"},
+                    {"name":"Guru", "age" :37, "gender":"male"},
+                    {"name":"somu", "age" :12, "gender":"male"},
+                    {"name":"hema", "age" :16, "gender":"male"},
+                    {"name":"Raji", "age" :24, "gender":"Female"},
+                    {"name":"Ramu", "age" :48, "gender":"male"},
+                    {"name":"komu", "age" :23, "gender":"male"}
+                ]}
+                kidsArray = json.data.filter(user => user.age <18)
+                mapArray = json.data.map(user =>` ${user.name} ${user.age}/${user.gender.substring(0,1).toUpperCase()}`); 
+                alert(`Kids ${JSON.stringify(kidsArray)}`)
+                alert(`Map ${mapArray}`)
+            }
+            arrayFilter();
+          </script>
+          </head>
+          </html>
+               
